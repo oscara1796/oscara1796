@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+
+
+html, body{
+  background: black;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+hr{
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+}
+
+nav{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav figure{
+  margin: 0px;
+}
+
+
+nav figure a img{
+  width: 25vw;
+}
+
+
+nav #myLinks{
+  margin: 0px 20%;
+  padding: 0px;
+  display: flex;
+}
+nav #myLinks li{
+  display: inline-block;
+  margin: 0px 10px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+nav #myLinks li:hover{
+  background-color: white;
+  color: black;
+}
+nav #myLinks li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Anonymous Pro', monospace;
+}
+nav #myLinks li a:hover{
+  color: black;
+}
+
+
+nav a.icon {
+  background: black;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+}
+nav a.icon:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  nav{
+    position: relative;
+  }
+
+  nav #myLinks{
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    margin: 0px;
+  }
+  nav #myLinks li{
+    margin: 0px 5px;
+    padding: 10px;
+  }
+  nav #myLinks li:hover{
+    background-color: white;
+    color: black !important;
+  }
+  nav #myLinks li a:hover{
+    color: black !important;
+  }
+
+
+  nav figure a img{
+    width: 50vw;
+  }
+
+  nav a.icon {
+    display: block;
+  }
+
+}
+
+
+
+
+/* PORTADA CSS  */
+#portada{
+  height: 70vh;
+  position: relative;
+  width: 100%;
+}
+
+.line{
+  font-family: 'Anonymous Pro', monospace;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 16em;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 200%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0px;
+  transform: translateY(-50%);
+}
+
+.anim-typewriter{
+  animation: typewriter 4s steps(40) 1s 1 normal both,
+  blinkTextCursor 500ms steps(40) infinite normal;
+
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+      width: 16em;
+    }
+}
+
+@keyframes blinkTextCursor {
+  from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #portada{
+    height: 25vh;
+  }
+    .line{
+      font-size: 150%;
+      right: 5%;
+    }
+}
+
+/* PROJECTS SECTION */
+
+#first_line{
+  text-align: center;
+  color: white;
+  font-family: "Helvetica";
+}
+
+.projects-show{
+  margin-top: 10vh;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: max-content;
+  grid-gap: 20px;
+  justify-items: center;
+  border: 1px solid red;
+}
+
+
+.project-card{
+  color: white;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  align-items: center;
+  border: 1px solid gray;
+  transition: all .4s ease-in-out;
+}
+.project-card:hover{
+  transform: scale(1.1);
+}
+
+.p-gen-content{
+  padding: 10px;
+}
+
+.p-content {
+  padding: 5px;
+}
+
+.p-img img{
+  width: 25vw;
+}
+.p-img {
+  margin: 0px;
+}
+
+/* footer */
+footer{
+  color: white;
+}

@@ -1,0 +1,14 @@
+{% load static %}
+
+<nav id="nav">
+  <figure id="cont_logo">
+    <a href="{% url "home" %}"><img src="{% static "img/signature.png" %}" alt=""></a>
+  </figure>
+  <ul id="myLinks">
+    <li><a href="">Work</a></li>
+    <li><a href="">About</a></li>
+  </ul>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>

@@ -1,0 +1,41 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block container %}
+  <section id="portada">
+    <p class="line anim-typewriter">Hi, welcome to my Portfolio</p>
+  </section>
+
+<hr>
+
+<h1 id="first_line">Projects</h1>
+
+  <section class="projects-show">
+      {% for p in projects %}
+        <div class="project-card">
+          <figure class="p-img">
+            <img src="{{p.image.url}}" alt="">
+          </figure>
+            <div class="p-gen-content">
+            <h3>{{p.title}}</h3>
+            <h4>{{p.subtitle}}</h4>
+            <h4><a href="{{p.url}}" target="_blank">{{p.url}}</a></h4>
+          </div>
+        </div>
+      {% endfor %}
+  </section>
+
+
+  <script type="text/javascript">
+    function restartAnimation(){
+      var ele = document.getElementsByClassName("anim-typewriter")[0]
+      ele.classList.remove("anim-typewriter");
+      void ele.offsetWidth;
+      ele.classList.add("anim-typewriter");
+
+    }
+
+    setInterval(restartAnimation,15000);
+  </script>
+
+{% endblock %}
