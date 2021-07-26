@@ -8,6 +8,7 @@ html, body{
   height: 100%;
   width: 100%;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 hr{
   margin-top: 15vh;
@@ -168,6 +169,38 @@ nav a.icon:hover {
       font-size: 150%;
       right: 5%;
     }
+}
+
+#down-arr{
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  animation-name: heartFadeInOut;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+
+
+
+
+@keyframes heartFadeInOut {
+ 0% {transform: scale(1);}
+ 25% {transform: scale(.97);}
+ 35% {transform: scale(.9);}
+ 45% {transform: scale(1.1);}
+ 55% {transform: scale(.9);}
+ 65% {transform: scale(1.1);}
+ 75% {transform: scale(1.03);}
+ 100% {transform: scale(1);}
+}
+
+
+#down-arr a{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+
 }
 
 /* PROJECTS SECTION */

@@ -4,13 +4,14 @@
 {% block container %}
   <section id="portada">
     <p class="line anim-typewriter">Hi, welcome to my Portfolio</p>
+    <span id="down-arr"><a href="#projects">▼</a></span>
   </section>
 
 <hr>
 
 <h1 id="first_line">Projects</h1>
 
-  <section class="projects-show">
+  <section id="projects" class="projects-show">
       {% for p in projects %}
         <div class="project-card">
           <figure class="p-img">
